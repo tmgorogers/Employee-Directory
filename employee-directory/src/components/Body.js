@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import "../styles/Body.css";
 import DataAreaContext from "../utils/DataAreaContext";
 
 const Body = () => {
