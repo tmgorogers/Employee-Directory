@@ -1,5 +1,5 @@
 import React from "react";
-import SearchName from "./SearchWithName.js";
+import SearchName from "./SearchName.js";
 import "../styles/Nav.css";
 
 const Nav = () => (
