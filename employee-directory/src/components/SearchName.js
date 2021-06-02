@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-//import "../styles/SearchName.css";
+import "../styles/SearchName.css";
 import DataAreaContext from "../utils/DataAreaContext";
 
 const SearchWithName = () => {
@@ -9,14 +9,18 @@ const SearchWithName = () => {
     <div className="searchbox">
       <div className="input-group">
         <div className="input-group-pretend">
-          <span className="input-group-text" id=""> Search</span>
+          <span className="input-group-text" id="">
+            
+            Search
+          </span>
         </div>
         <input
-        className="form-control mr-sm-2"
-        type="search"
-        placeholder="name"
-        aria-label="search"
-        onChange={(e)=> context.handleSearchChange(e)} />
+          className="form-control mr-sm-2"
+          type="search"
+          placeholder="name"
+          aria-label="Search"
+          onChange={(e) => context.handleSearchChange(e)}
+        />
       </div>
     </div>
   );

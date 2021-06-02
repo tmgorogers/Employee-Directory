@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Table from "./Table";
 import Nav from "./Nav";
 import API from "../utils/API";
+import "../styles/EmployeeContainer.css";
 import DataAreaContext from "../utils/DataAreaContext";
 
 const EmployeeContainer = () => {
@@ -77,15 +78,16 @@ const EmployeeContainer = () => {
   };
 
   const handleSearchChange = (event) => {
-    const filter = event.target.value;
-    const filteredList = developerState.users.filter((item) =>
-    {
+    setDeveloperState({ filteredUsers: event.target.name.value });
+    const filter= event.target.value;
+    const filteredList = developerState.users.filter((item) => {
       let values =
         item.name.first.toLowerCase() + " " + item.name.last.toLowerCase();
       console.log(filter, values);
-      if (values.indexOf(filter.toLowerCase()) !== -1) {
-        return item;
-      }
+      return values.indexOf(filter.toLowerCase()) !== -1; //{
+      // return true;
+      //}
+      // return false;
     });
 
     setDeveloperState({ ...developerState, filteredUsers: filteredList });
@@ -114,35 +116,5 @@ const EmployeeContainer = () => {
     </DataAreaContext.Provider>
   );
 };
-
-/*const useSortableData = (items, config = null) => {
-    const [sortConfig, setSortConfig] = React.useState(config);
-    
-    const sortedItems = React.useMemo(() => {
-      let sortableItems = [...items];
-      if (sortConfig !== null) {
-        sortableItems.sort((a, b) => {
-          if (a[sortConfig.key] < b[sortConfig.key]) {
-            return sortConfig.direction === 'ascending' ? -1 : 1;
-          }
-          if (a[sortConfig.key] > b[sortConfig.key]) {
-            return sortConfig.direction === 'ascending' ? 1 : -1;
-          }
-          return 0;
-        });
-      }
-      return sortableItems;
-    }, [items, sortConfig]);
-  
-    const requestSort = key => {
-      let direction = 'ascending';
-      if (sortConfig && sortConfig.key === key && sortConfig.direction === 'ascending') {
-        direction = 'descending';
-      }
-      setSortConfig({ key, direction });
-    }
-  
-    return { items: sortedItems, requestSort };
-  }*/
 
 export default EmployeeContainer;

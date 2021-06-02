@@ -1,7 +1,5 @@
 import React from "react";
 import Main from "./components/Main";
-import Nav from "./components/Nav";
-import Body from "./components/Body";
 import Wrapper from "./components/Wrapper";
 import Header from "./components/Header";
 
@@ -13,9 +11,7 @@ function App() {
     <div className="App">
     <Wrapper>
       <Header />
-      <Nav />
       <Main />
-      <Body />
     </Wrapper>
     </div>
   );

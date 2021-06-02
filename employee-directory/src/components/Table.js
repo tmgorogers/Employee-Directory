@@ -11,7 +11,7 @@ const Table = () => {
             <table id="table" className="table table-striped table-hover table-condensed">
                 <thred>
                     <tr>
-                        {context.developerState.heading.map(({ name, width })=>{
+                        {context.developerState.headings.map(({ name, width })=>{
                             return(
                                 <th className="col" key={name} style={{width}} onClick={() => context.handleSort(name)
                                 }>
