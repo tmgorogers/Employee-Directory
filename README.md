@@ -15,7 +15,8 @@ An employee or manager would benefit greatly from being able to view non-sensiti
 ## Questions:
 
 For any questions about my Employee Directory you can go to my Github page at the following link:
-![Github Profile](https://github.com/tmgorogers/Employee-Directory)
-![Github gh-pgs](https://tmgorogers.github.io/Employee-Directory/)
+
+[Github Profile](https://github.com/tmgorogers/Employee-Directory)
+[Github gh-pgs](https://tmgorogers.github.io/Employee-Directory/)
 
  
